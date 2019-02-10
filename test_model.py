@@ -19,9 +19,9 @@ X /= 15
 model = Perceptron(X, y_, learning_rate=0.7)
 model.add_layer(64, 30)
 model.add_layer(30, 10)
-model.train(1000)
+model.train(800)
 
-print("Precision of model: ", accuracy_score(y, np.ravel(model.predict(X)) * 100))
+print("Precision of model: ", accuracy_score(y, np.ravel(model.predict(X))))
 
 plt.plot(model.mse_for_plot)
 plt.show()

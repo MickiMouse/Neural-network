@@ -53,7 +53,7 @@ class Perceptron:
                 n = self.neurons[i]
                 w = self.weights[i+1]
                 delta = self.errors[i+1]
-                self.errors[i] = np.multiply(self.d(n), (np.dot(delta, w.T)))
+                self.errors[i] = self.d(n) * (np.dot(delta, w.T))
 
         return self.errors
 
